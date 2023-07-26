@@ -19,7 +19,7 @@ body {
   --blue-color: #fff;
   --grey-color: #f2f2f2;
   --grey-color-light: #aaa;
-  overflow:hidden;
+
 }
 
 
@@ -304,8 +304,8 @@ body {
 .row{
 
 
-  margin-right:2rem;
-  margin-left:2rem;
+  margin-right:5rem;
+  margin-left:5rem;
 
 
 }
@@ -321,4 +321,50 @@ body {
   width:100%;
   text-align: center;
 
+}
+
+.mastery-tree-progress{
+  
+  --bs-progress-height: 0.5rem !important;
+
+}
+
+.locked-tree-progress{
+  
+  --bs-progress-height: 0.6rem !important;
+
+}
+
+.chop-time-progress{
+
+  --bs-progress-height: 1.5rem !important;
+  border-radius: 0.25rem !important;
+
+}
+
+.woodcutting-tree-wrapper{
+
+  padding: 1.25rem 1.25rem 1px;
+  
+
+}
+
+.tree{
+
+   transition: transform 0.2s ease-in-out;
+
+}
+
+.tree:hover {
+  transform: scale(1.05); 
+}
+
+.mastery-tree-progress-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side-tree-mastery-info,
+.right-side-tree-mastery-info {
+  display: inline-block; /* or use display: inline; */
 }

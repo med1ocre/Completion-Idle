@@ -197,53 +197,295 @@
 
 
           <!-- Add a class "tree" to each tree element to identify them -->
+          <!-- Oak Tree -->
           <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem">
-            <div class="block pointer-enabled oak-tree-tile" data-tree-type="oak" onclick="startCutting(this, 3000, 15)">
-              <div class="text-align-center">
-                <h2>Oak Tree</h2>
-              </div>
+            <div class="block pointer-enabled oak-tree-tile" data-tree-type="Oak" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Oak Tree</h2>
+                </div>
               <div class="text-align-center woodcutting-tree-xp-time">
-                <p>10 XP / <i class='bx bx-time-five'></i> 3 seconds</p>
+                <p><span >10</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Oak">3</span> seconds</p>
               </div>
-              <div class="progress active">
-                <div class="progress-bar bg-woodcutting" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress active chop-time-progress">
+                <div class="progress-bar bg-woodcutting" data-xp-reward="Oak" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <br>
               <br>
               <br>
               <br>
+              <div class="mastery-tree-progress-info">
+                <div class="left-side-tree-mastery-info">
+                  <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                </div>
+                <div class="right-side-tree-mastery-info">
+                  <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                </div>
+                
+              </div>
+              
+              <div class="progress active mastery-tree-progress">
+                <div class="progress-bar bg-woodcutting" data-xp-reward="Oak" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br>
+              
+              </div>
+            </div>
+              
+          </div>
+
+           <!-- Pine Tree -->
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled oak-tree-tile" data-tree-type="Pine" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Pine Tree</h2>
+                </div>
+              <div class="text-align-center woodcutting-tree-xp-time">
+                <p><span >15</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Pine">4</span> seconds</p>
+              </div>
+              <div class="progress active chop-time-progress">
+                <div class="progress-bar bg-woodcutting" data-xp-reward="Pine" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
               <br>
               <br>
               <br>
               <br>
+              <div class="mastery-tree-progress-info">
+                <div class="left-side-tree-mastery-info">
+                  <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                </div>
+                <div class="right-side-tree-mastery-info">
+                  <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                </div>
+                
+              </div>
+              
+              <div class="progress active mastery-tree-progress">
+                <div class="progress-bar bg-woodcutting" data-xp-reward="Pine" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br>
+              
+              </div>
+            </div>
+              
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled willow-tree-tile" data-tree-type="Willow" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Willow Tree</h2>
+                </div>
+                <div class="text-align-center woodcutting-tree-xp-time">
+                  <p><span>30</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Willow">5</span> seconds</p>
+                </div>
+                <div class="progress active chop-time-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Willow" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="mastery-tree-progress-info">
+                  <div class="left-side-tree-mastery-info">
+                    <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                  </div>
+                  <div class="right-side-tree-mastery-info">
+                    <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                  </div>
+                </div>
+                <div class="progress active mastery-tree-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Willow" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+              </div>
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem">
-            <div class="block pointer-enabled pine-tree-tile" data-tree-type="pine">
-              <div class="text-align-center">
-                <h2>Pine Tree</h2>
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled maple-tree-tile" data-tree-type="Maple" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Maple Tree</h2>
+                </div>
+                <div class="text-align-center woodcutting-tree-xp-time">
+                  <p><span>45</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Maple">8</span> seconds</p>
+                </div>
+                <div class="progress active chop-time-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Maple" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="mastery-tree-progress-info">
+                  <div class="left-side-tree-mastery-info">
+                    <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                  </div>
+                  <div class="right-side-tree-mastery-info">
+                    <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                  </div>
+                </div>
+                <div class="progress active mastery-tree-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Maple" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
               </div>
-              <div class="text-align-center woodcutting-tree-xp-time">
-                <p>15 XP / <i class='bx bx-time-five'></i> 4 seconds</p>
-              </div>
-              <div class="progress active">
-                <div class="progress-bar bg-woodcutting" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
             </div>
           </div>
 
-          <!-- Add more tree elements here with the "tree" class and different data-tree-type values -->
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled yew-tree-tile" data-tree-type="Yew" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Yew Tree</h2>
+                </div>
+                <div class="text-align-center woodcutting-tree-xp-time">
+                  <p><span>60</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Yew">12</span> seconds</p>
+                </div>
+                <div class="progress active chop-time-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Yew" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="mastery-tree-progress-info">
+                  <div class="left-side-tree-mastery-info">
+                    <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                  </div>
+                  <div class="right-side-tree-mastery-info">
+                    <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                  </div>
+                </div>
+                <div class="progress active mastery-tree-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Yew" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
 
-          
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled yew-tree-tile" data-tree-type="Magic" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Magic Tree</h2>
+                </div>
+                <div class="text-align-center woodcutting-tree-xp-time">
+                  <p><span>100</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Magic">20</span> seconds</p>
+                </div>
+                <div class="progress active chop-time-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Magic" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="mastery-tree-progress-info">
+                  <div class="left-side-tree-mastery-info">
+                    <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                  </div>
+                  <div class="right-side-tree-mastery-info">
+                    <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                  </div>
+                </div>
+                <div class="progress active mastery-tree-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Magic" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled yew-tree-tile" data-tree-type="Redwood" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Redwood Tree</h2>
+                </div>
+                <div class="text-align-center woodcutting-tree-xp-time">
+                  <p><span>180</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Redwood">15</span> seconds</p>
+                </div>
+                <div class="progress active chop-time-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Redwood" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="mastery-tree-progress-info">
+                  <div class="left-side-tree-mastery-info">
+                    <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                  </div>
+                  <div class="right-side-tree-mastery-info">
+                    <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                  </div>
+                </div>
+                <div class="progress active mastery-tree-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Redwood" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text tree" style="margin-bottom:2rem; display:none">
+            <div class="block pointer-enabled yew-tree-tile" data-tree-type="Spruce" onclick="startCutting(this)">
+              <div class="woodcutting-tree-wrapper">
+                <div class="text-align-center">
+                  <h2>Spruce Tree</h2>
+                </div>
+                <div class="text-align-center woodcutting-tree-xp-time">
+                  <p><span>140</span> XP / <i class='bx bx-time-five'></i> <span data-chop-time="Spruce">18</span> seconds</p>
+                </div>
+                <div class="progress active chop-time-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Spruce" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="mastery-tree-progress-info">
+                  <div class="left-side-tree-mastery-info">
+                    <i class='bx bx-trophy'>&nbsp;</i><span>0</span>
+                  </div>
+                  <div class="right-side-tree-mastery-info">
+                    <span><span id="mastery-xp">0</span> / <span id="mastery-required-xp">83</span></span>
+                  </div>
+                </div>
+                <div class="progress active mastery-tree-progress">
+                  <div class="progress-bar bg-woodcutting" data-xp-reward="Spruce" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-4 col-xl-3 white-text" style="margin-bottom:2rem;">
+            <div class="block">
+              <div class="woodcutting-tree-wrapper text-align-center">
+                <br>
+                <h1>Locked</h1>
+                <br>
+                <h6><i class='bx bx-lock-alt'></i> Level <span id="required-woodcutting-level">5</span></h6>
+                <div class="text-align-center">
+                  <div class="progress active locked-tree-progress">
+                    <div class="progress-bar bg-woodcutting" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+
+
+
 
           
 
