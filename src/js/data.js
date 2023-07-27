@@ -18,11 +18,166 @@ let player = {
 }
 
 
+let Items = {
+
+  completedItems: 0,
+  totalItems: 7,
+
+  Combat: {
+
+  },
+
+  Cooking: {
+
+  },
+
+  Crafting: {
+
+  },
+
+  Dungeon: {
+
+  },
+
+  Event: {
+
+
+  },
+
+  Farming: {
+
+  },
+
+  Firemaking: {
+
+  },
+
+  Fishing: {
+
+  },
+
+  Fletching: {
+
+  },
+
+  Herblore: {
+
+  },
+
+  Mining: {
+
+  },
+
+  Misc: {
+
+  },
+
+  Runecrafting: {
+
+  },
+
+  Smithing: {
+
+  },
+
+  Summoning: {
+
+  },
+
+  Thieving: {
+
+  },
+
+  Woodcutting: {
+
+    Equipment: {
+
+    },
+
+    Logs: {
+
+      OakLog: {
+
+        name: 'Oak Log',
+        media: '',
+        price: 5,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+
+      PineLog: {
+
+        name: 'Pine Log',
+        media: '',
+        price: 10,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+
+      WillowLog: {
+
+        name: 'Willow Log',
+        media: '',
+        price: 20,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+      MapleLog: {
+
+        name: 'Maple Log',
+        media: '',
+        price: 35,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+      YewLog: {
+
+        name: 'Yew Log',
+        media: '',
+        price: 50,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+      MagicLog: {
+
+        name: 'Magic Log',
+        media: '',
+        price: 400,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+      RedwoodLog: {
+
+        name: 'Redwood Log',
+        media: '',
+        price: 25,
+        requiredCompletion: true,
+        completed: false,
+
+      },
+
+
+    },
+
+
+
+  }
+
+
+}
+
 let Skill = {
   Woodcutting: {
     Level: 1,
     currentXP: 0,
     xpToLevel: 50,
+    logAmount: 1,
     currentMastery: 1,
     totalMastery: 7,
     Trees: {
@@ -31,9 +186,10 @@ let Skill = {
         chopTime: 3000,
         itemReward: {
           name: "Oak Log",
-          item: "oakLog",
+          item: "OakLog",
         },
         masteryXP: 0,
+        requiredMasteryXP: 83,
         masteryLevel: 1
       },
       Pine: {
@@ -41,8 +197,9 @@ let Skill = {
         chopTime: 4000,
         itemReward: {
           name: "Pine Log",
-          item: "pineLog",
+          item: "PineLog",
         },
+        requiredMasteryXP: 83,
         masteryXP: 0,
         masteryLevel: 1
       },
@@ -51,8 +208,9 @@ let Skill = {
         chopTime: 5000,
         itemReward: {
           name: "Willow Log",
-          item: "willowLog",
+          item: "WillowLog",
         },
+        requiredMasteryXP: 83,
         masteryXP: 0,
         masteryLevel: 1
       },
@@ -61,8 +219,9 @@ let Skill = {
         chopTime: 6000,
         itemReward: {
           name: "Maple Log",
-          item: "mapleLog",
+          item: "MapleLog",
         },
+        requiredMasteryXP: 83,
         masteryXP: 0,
         masteryLevel: 1
       },
@@ -71,8 +230,9 @@ let Skill = {
         chopTime: 8000,
         itemReward: {
           name: "Yew Log",
-          item: "yewLog",
+          item: "YewLog",
         },
+        requiredMasteryXP: 83,
         masteryXP: 0,
         masteryLevel: 1
       },
@@ -81,8 +241,9 @@ let Skill = {
         chopTime: 10000,
         itemReward: {
           name: "Magic Log",
-          item: "magicLog",
+          item: "MagicLog",
         },
+        requiredMasteryXP: 83,
         masteryXP: 0,
         masteryLevel: 0
       },
@@ -91,8 +252,9 @@ let Skill = {
         chopTime: 12000,
         itemReward: {
           name: "Redwood Log",
-          item: "redwoodLog",
+          item: "RedwoodLog",
         },
+        requiredMasteryXP: 83,
         masteryXP: 0,
         masteryLevel: 1
       }

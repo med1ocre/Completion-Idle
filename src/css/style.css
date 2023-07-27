@@ -368,3 +368,9 @@ body {
 .right-side-tree-mastery-info {
   display: inline-block; /* or use display: inline; */
 }
+
+.bg-mastery{
+
+  background-color: #FFBF00!important;
+
+}

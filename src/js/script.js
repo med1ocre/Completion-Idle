@@ -1,3 +1,21 @@
+
+function transferItemToInv(item, amount){
+
+  const playerInventory = player.inventory;
+  const existingItem = playerInventory.find((invItem) => invItem.item === item.item);
+
+
+  if (!playerInventory.includes(item)) {
+    item.amount = 0;
+    item.amount += amount;
+    playerInventory.push(item);
+  }else{
+    existingItem.amount += amount;
+  }
+
+
+}
+
 function calcReqMasteryXP(treeElement){
   const progressBar = treeElement.querySelector(".progress-bar");
   const attr = progressBar.getAttribute('data-xp-reward');
@@ -64,17 +82,27 @@ function finishCut(treeElement, attr, tree){
 
   //Set level text and other stuff
   const progressBar = treeElement.querySelector(".progress-bar");
+  const masteryProgressBar = treeElement.querySelector(".bg-mastery");
   const masteryRequiredXP = treeElement.querySelector("#mastery-required-xp");
   const masteryCurrentXP = treeElement.querySelector("#mastery-xp");
   const masteryLevel = treeElement.querySelector("#mastery-xp");
 
 
-  const newItem = tree.itemReward.item;
-  const itemArray = Skill.Woodcutting.totalItems;
+  const itemReward = tree.itemReward;
+  const item = itemReward.item;
+  const selectedLog = Items.Woodcutting.Logs[item];
 
-
-
+  //check for completion
+  if(!selectedLog.completed){
+    Items.completedItems += 1;
+    selectedLog.completed = true;
+  }
+  //transfer item
+  transferItemToInv(selectedLog, Skill.Woodcutting.logAmount);
+  
+  //add xp to woodcut skill
   Skill.Woodcutting.currentXP += tree.xpReward;
+  //add mastery xp to log
   tree.masteryXP += calcMasteryXPRewardTree(treeElement);
 
   masteryRequiredXP.innerHTML = calcReqMasteryXP(treeElement);
@@ -83,6 +111,10 @@ function finishCut(treeElement, attr, tree){
   progressBar.style.transition = 'none';
   progressBar.style.width = "0%";
 
+  //set mastery progress
+  const percent = tree.masteryXP / tree.requiredMasteryXP * 100;
+  console.log(percent)
+  masteryProgressBar.style.width = percent + "%";
 
   setTimeout(() => {
 
